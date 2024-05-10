@@ -8,12 +8,18 @@ import ProfilesPage from "./pages/ProfilesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage />, errorElement: <NotFoundPage /> },
-  { path: "/profile", element: <ProfilePage /> },
   {
-    path: "/profiles",
+    path: "/reactrouter",
+    element: <HomePage />,
+    errorElement: <NotFoundPage />,
+  },
+  { path: "/reactrouter/profile", element: <ProfilePage /> },
+  {
+    path: "/reactrouter/profiles",
     element: <ProfilesPage />,
-    children: [{ path: "/profiles/:profileId", element: <ProfilePage /> }],
+    children: [
+      { path: "/reactrouter/profiles/:profileId", element: <ProfilePage /> },
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
