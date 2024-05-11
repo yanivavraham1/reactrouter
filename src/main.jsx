@@ -13,9 +13,9 @@ const router = createBrowserRouter([
     element: <HomePage />,
     errorElement: <NotFoundPage />,
   },
-  { path: "/reactrouter/profile", element: <ProfilePage /> },
+  { path: "/profile", element: <ProfilePage /> },
   {
-    path: "/reactrouter/profiles",
+    path: "/profiles",
     element: <ProfilesPage />,
     children: [
       { path: "/reactrouter/profiles/:profileId", element: <ProfilePage /> },
